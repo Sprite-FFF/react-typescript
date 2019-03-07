@@ -1,0 +1,10 @@
+.header {
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main {
+    /* 127 header + 面包屑 + padding-bottom */
+    min-height: calc(100vh - 81px)
+}

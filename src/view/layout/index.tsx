@@ -3,6 +3,7 @@ import * as React from 'react'
 import { Layout, Menu, Breadcrumb, Icon } from 'antd'
 const { SubMenu } = Menu
 const { Header, Content, Sider } = Layout
+import './index.css'
 const menus: object[] = [
   {
     text: '用户管理',
@@ -23,8 +24,14 @@ const menus: object[] = [
     children: []
   },
   {
-    text: '讲师管理',
+    text: '教师管理',
     key: 'teacher',
+    icon: 'user',
+    children: []
+  },
+  {
+    text: '学生管理',
+    key: 'student',
     icon: 'user',
     children: []
   },
@@ -45,9 +52,11 @@ class LayoutMain extends React.Component<object, any> {
   public render() {
     return (
       <Layout>
-        <Header className="header">
-          <div className="logo" />
-        </Header>
+        <div className="header">
+          <Header>
+            <div className="logo" />
+          </Header>
+        </div>
         <Layout>
           <Sider width={200} style={{ background: '#fff' }}>
             <Menu
@@ -80,18 +89,18 @@ class LayoutMain extends React.Component<object, any> {
 
             </Menu>
           </Sider>
-          <Layout style={{ padding: '0 24px 24px' }}>
-            <Breadcrumb style={{ margin: '16px 0' }}>
+          <Layout>
+            <Breadcrumb>
               <Breadcrumb.Item>Home</Breadcrumb.Item>
               <Breadcrumb.Item>List</Breadcrumb.Item>
               <Breadcrumb.Item>App</Breadcrumb.Item>
             </Breadcrumb>
-            <Content style={{
-              background: '#fff', padding: 24, margin: 0, minHeight: 280,
-            }}
-            >
-              Content
-        </Content>
+            <div className="main">
+              <Content>
+                Content
+              </Content>
+            </div>
+            
           </Layout>
         </Layout>
       </Layout>
