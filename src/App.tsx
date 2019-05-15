@@ -2,9 +2,7 @@ import * as React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Todo from './view/todo/index'
 import Layout from './view/layout/index'
-import './App.css'
-import 'antd/dist/antd.css'
-
+// import './App.css'
 class App extends React.Component<object, object> {
   constructor (props: Readonly<object>) {
     super(props)

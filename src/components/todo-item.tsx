@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as style from '../view/todo/todo.css'
 interface ITodo{
   content: string,
   isComplete: boolean
@@ -13,10 +14,10 @@ export default class TodoItem extends React.Component<IProps, object> {
   public render () {
     const {content, isComplete} = this.props.item
     return(
-      <div className="item">
-        <span onClick = {this.handleComplete} className={`circle ${isComplete ? 'checked' : ''}`} />
+      <div className={ style.item }>
+        <span onClick = {this.handleComplete} className={`${ style.circle } ${isComplete ? style.checked : ''}`} />
         <p>{ content }</p>
-        <span onClick = {this.handleDelete} className="del">x</span>
+        <span onClick = {this.handleDelete}>x</span>
       </div>
     )
   }

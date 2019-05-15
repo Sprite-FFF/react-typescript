@@ -175,13 +175,23 @@ module.exports = {
             use: [
               require.resolve('style-loader'),
               {
-                loader: require.resolve('css-loader'),
+                loader: 'typings-for-css-modules-loader',
                 options: {
-                  importLoaders: 1,
                   modules: true,
-                  localIdentName: "[name]__[local]___[hash:base64:5]"
-                },
-              },
+                  namedExport: true,
+                  camelCase: true,
+                  minimize: true,
+                  localIdentName: "[local]_[hash:base64:5]"
+                }
+              },      
+              // {
+              //   loader: require.resolve('css-loader'),
+              //   options: {
+              //     importLoaders: 1,
+              //     modules: true,
+              //     localIdentName: "[name]__[local]___[hash:base64:5]"
+              //   },
+              // },
               {
                 loader: require.resolve('postcss-loader'),
                 options: {

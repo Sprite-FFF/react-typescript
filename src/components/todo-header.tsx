@@ -1,11 +1,11 @@
 import * as React from 'react'
-// import '../App.css'
+import * as style from '../view/todo/todo.css'
 
 export default class TodoHeader extends React.Component {
   public render() {
     return (
       <div>
-        <header className="header">
+        <header className={ style.header }>
           TodoList
         </header>
       </div>

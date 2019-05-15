@@ -2,7 +2,9 @@ import * as React from 'react'
 import TodoFooter from 'src/components/todo-footer'
 import TodoHeader from 'src/components/todo-header'
 import TodoItem from 'src/components/todo-item'
-import './todo.css';
+import * as style from './todo.css';
+// tslint:disable-next-line: no-console
+console.log('style', style)
 
 interface ITodo{
   content: string,
@@ -27,13 +29,13 @@ class Todo extends React.Component<{}, IState> {
   public render() {
     const {isAllChecked} = this.state
     return (
-      <div className="app">
+      <div className={ style.app }>
         <TodoHeader />
-        <div className="input-box">
-          <span onClick={this.handleCheckAll} className={`check-all ${isAllChecked ? 'checked' : ''}`} />
+        <div className={ style.inputBox }>
+          <span onClick={this.handleCheckAll} className={`${ style.checkAll } ${isAllChecked ? style.checked : ''}`} />
           <input onChange={this.handleChange} onKeyPress={ this.handleInput } value={this.state.inputVal} type="text"/>
         </div>
-        <div className='main'>
+        <div className={ style.main }>
           {
             this.state.todoItems.map((el, index) => {
               return (
