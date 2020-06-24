@@ -17,7 +17,9 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "downlevelIteration": true
   },
   "exclude": [
     "node_modules",
@@ -26,6 +28,7 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts"
+    "src/setupTests.ts",
+    "config"
   ]
 }

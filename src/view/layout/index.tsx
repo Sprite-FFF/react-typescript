@@ -1,12 +1,11 @@
 
 import * as React from 'react'
-class LayoutMain extends React.Component<object, any> {
-  constructor(props: Readonly<object>) {
-    super(props)
-  }
-  public render() {
-    return <div>daa</div>
-  }
+import Header from 'src/components/header/index'
+
+const Layout = () => {
+  return (
+    <Header />
+  )
 }
 
-export default LayoutMain
+export default Layout

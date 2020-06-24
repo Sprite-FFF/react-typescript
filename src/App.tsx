@@ -1,7 +1,8 @@
 import * as React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import getRouter from './router'
-// import './App.css'
+// tslint:disable-next-line: no-console
+import './App.css'
 class App extends React.Component<object, object> {
   constructor (props: Readonly<object>) {
     super(props)
@@ -10,10 +11,13 @@ class App extends React.Component<object, object> {
     return (
       <Router>
         { getRouter() }
+        {/* <getRouter /> */}
       </Router>
     );
   }
-  
 } 
+// const App: React.SFC = () => {
+//   return <Router> {getRouter()} </Router>
+// }
 
 export default App;
