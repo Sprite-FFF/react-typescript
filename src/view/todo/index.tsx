@@ -3,8 +3,6 @@ import TodoFooter from 'src/components/todo-footer'
 import TodoHeader from 'src/components/todo-header'
 import TodoItem from 'src/components/todo-item'
 import * as style from './todo.css'
-// tslint:disable-next-line: no-console
-console.log('style', style)
 
 interface ITodo{
   content: string,

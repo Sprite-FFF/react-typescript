@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Route, Switch } from 'react-router'
 
 import Todo from './view/todo'
-import Login from './view/login'
+import Login from './view/login/Index'
 import Layout from './view/layout'
 import HooksTodo from './view/hooksTodo/Index'
 const getRouter = () => (

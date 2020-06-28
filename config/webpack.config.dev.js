@@ -171,7 +171,7 @@ module.exports = {
           // in development "style" loader enables hot editing of CSS.
           {
             test: /\.css$|\.scss$/,
-            exclude: /node_modules|antd\.css|common.css/,
+            exclude: /node_modules|antd\.css|common\.css/,
             use: [
               require.resolve('style-loader'),
               {
@@ -217,7 +217,7 @@ module.exports = {
           },
           {
             test: /\.css$/,
-            include: /common.css/,
+            include: /node_modules|antd\.css|common\.css/,
             use:['style-loader','css-loader',{
               loader: require.resolve('postcss-loader'),
               options: {
@@ -237,7 +237,7 @@ module.exports = {
                   }),
                 ],
               },
-            },'sass-loader']
+            }]
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
