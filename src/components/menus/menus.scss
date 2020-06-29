@@ -1,0 +1,19 @@
+.menus-container {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F4F4F4;
+  &>div {
+    padding: 0 8px;
+    margin: 0 10px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    &.active {
+      background-color: #000000;
+      color: #FFF;
+    }
+  }
+}

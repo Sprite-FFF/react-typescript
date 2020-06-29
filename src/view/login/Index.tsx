@@ -25,7 +25,7 @@ const Login:React.FC = () => {
     })
   }
   return (
-    <div>
+    <div className={ style.loginContainer }>
       <Meteor />
       <Form
         className={ style.loginForm }

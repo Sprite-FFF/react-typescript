@@ -1,11 +1,3 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-  overflow: hidden;
-}
 
 @function random_range($min, $max) {
   $rand: random();
@@ -14,7 +6,7 @@ body {
 }
 
 .stars {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;

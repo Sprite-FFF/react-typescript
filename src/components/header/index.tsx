@@ -1,25 +1,22 @@
 import * as React from 'react'
-import * as style from './header.css'
+import * as style from './header.scss'
+import { TwitterOutlined, WeiboOutlined,GithubOutlined, InstagramOutlined } from '@ant-design/icons'
 
-class Header extends React.Component {
-    public render () {
-        return (
-            <header className={ style.header }>
-                <div className="container">
-                    <div className={ style.left }>
-                        <a href="javascript:void(0);">
-                            花瓣
-                        </a>
-                        <ul>
-                            <li><a href="javascript:void(0);">首页</a></li>
-                            <li><a href="javascript:void(0);">发现</a></li>
-                            <li><a href="javascript:void(0);">最新</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-        )
-    }
+const Header = () => {
+    return (
+        <div className={ style.header }>
+            <div className={ style.headerLeft }>
+                <TwitterOutlined />
+                <WeiboOutlined />
+                <GithubOutlined />
+                <InstagramOutlined />
+            </div>
+            <div className={ style.headerCenter }>Demi</div>
+            <div className={ style.headerRight }>
+                right
+            </div>
+        </div>
+    )
 }
 
 export default Header
