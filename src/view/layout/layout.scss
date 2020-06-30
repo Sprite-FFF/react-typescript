@@ -1,0 +1,7 @@
+
+@import '../../assets/css/varable.scss';
+.main {
+    width: 80%;
+    margin: 0 auto;
+    min-height: calc(100vh - #{ $h-header } - #{ $h-menus } - #{ $h-footer-top } - #{ $h-footer-bottom })
+}

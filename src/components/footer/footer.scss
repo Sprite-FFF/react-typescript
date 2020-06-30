@@ -1,0 +1,16 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  &-container {
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: .8);
+    text-align: center;
+  }
+  &-top {
+    height: 320px;
+  }
+  &-bottom {
+    border-top: 1px solid #666666;
+    height: 88px;
+  }
+}
